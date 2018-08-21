@@ -15,7 +15,7 @@ phases:
         commands:
             - echo "******** Uploading to S3 ********"
             - echo "aws s3 sync src/ s3://free-domain-test.tk/game_id_$GAME_ID/$CH"
-            - echo "aws s3 sync src/ s3://free-domain-test.tk/"
+            - aws s3 sync src/ s3://free-domain-test.tk/
     post_build:
         commands:
             - echo Build completed on `date`
