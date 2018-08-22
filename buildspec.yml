@@ -1,20 +1,21 @@
 version: 0.2
 
 env:
-  variables:
-      GAME_ID: "333"
+    variables:
+        GAME_ID: "333"
         CH: "master"
-  phases:
-    install:
-        commands:
-            - echo Nothig to do in the install phase...
-    pre_build:
-        commands:
-            - echo Nothing to do in the pre_build phase...
-    build:
-        commands:
-            - echo "******** Uploading to S3 ********"
-            - aws s3 sync ./$GAME_ID s3://free-domain-test.tk/$GAME_ID
-    post_build:
-        commands:
-            - echo Build completed on `date`
+    phases:
+        install:
+            commands:
+                - echo Nothig to do in the install phase...
+        pre_build:
+            commands:
+                - echo Nothing to do in the pre_build phase...
+        build:
+            commands:
+                - echo "******** Uploading to S3 ********"
+                - aws s3 sync ./$GAME_ID s3://free-domain-test.tk/$GAME_ID
+        post_build:
+            commands:
+                - echo Build completed on `date`
+                
