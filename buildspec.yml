@@ -1,10 +1,10 @@
 version: 0.2
 
 env:
-    variables:
-        GAME_ID: "333"
+  variables:
+      GAME_ID: "study"
         CH: "master"
-phases:
+  phases:
     install:
         commands:
             - echo Nothig to do in the install phase...
